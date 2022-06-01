@@ -17,9 +17,14 @@ public class AmazonTask {
     @Test
     public void amazon_task(){
         driver = Driver.getDriver();
+        //Go to https://www.amazon.com
         driver.get("https://www.amazon.com");
+
+        //Search for "hats for men" (Call from Configuration.properties file)
         WebElement searchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
         searchBox.sendKeys(ConfigurationReader.getProperty("searchValue")+ Keys.ENTER);
+
+        //Add the first hat appearing to Cart with quantity 2
 
         driver.findElement(By.xpath("(//img[@class='s-image'])[1]")).click();
 
@@ -74,7 +79,6 @@ public class AmazonTask {
 
         Assert.assertEquals(priceOfOne,priceOfQuantityDecreased);
 
-
     }
 
     @AfterMethod
@@ -82,7 +86,6 @@ public class AmazonTask {
         BrowserUtils.sleep(3);
         driver.close();
     }
-
 
 }
 /*
