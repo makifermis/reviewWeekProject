@@ -93,7 +93,6 @@ For the Tasks bellow create a new Maven Project, use the latest topics you have 
 Share your project on GitHub, create a commit history. Also for each different task create a branch, then merge it when the task is over. (Optional; share you project Github Link at Tasks and Solutions Channel on Discord.)
 
 
-
 Task 1: The task consists on the next steps:
 1.	Go to https://www.amazon.com
 2.	Search for "hats for men" (Call from Configuration.properties file)
