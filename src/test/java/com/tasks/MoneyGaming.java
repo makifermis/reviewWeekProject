@@ -1,11 +1,13 @@
 package com.tasks;
 
+import com.utilities.BrowserUtils;
 import com.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class MoneyGaming {
@@ -44,6 +46,11 @@ public class MoneyGaming {
         String actualMessage = warningMessage.getText();
 
         Assert.assertEquals(actualMessage,expectedMessage);
+
+        @AfterMethod
+        public void tearDown() {
+            driver.close();
+        }
 
 
 
