@@ -47,14 +47,15 @@ public class MoneyGaming {
 
         Assert.assertEquals(actualMessage,expectedMessage);
 
-        @AfterMethod
-        public void tearDown() {
-            driver.close();
-        }
 
 
 
 
+
+    }
+    @AfterMethod
+    public void tearDown() {
+        driver.close();
     }
 
 }
